@@ -1,0 +1,122 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+
+
+body{
+    font-family: "Poppins", sans-serif;
+
+}
+
+nav{
+
+    background-color: rgb(255, 255, 255);
+    min-height: 50px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.196);
+    margin: 0 auto;
+
+
+}
+
+nav .nav-links ul li a, nav .nav-links2 ul li a{
+   text-decoration: none;
+   color: black;
+
+   
+}
+nav .nav-links{
+
+    width: 50%;
+    margin-left: auto;
+    padding: 10px 0;
+    opacity: 1;
+
+}
+
+
+
+nav .nav-links ul {
+   display: flex;
+   align-items: center;
+   column-gap: 20px;;
+   list-style: none;
+   justify-content: space-evenly;
+}
+
+nav .nav-links2{
+    font-size: 0;
+    opacity: 0;
+}
+ 
+
+ @media (max-width: 650px){
+
+nav .nav-links{
+    opacity:0;
+    display: none;
+}
+
+nav .nav-links2{
+ 
+
+    height: 50px;
+    opacity: 0;
+    font-size: 1rem;
+    position: relative;
+    top:100px;
+    left: 45%;
+    transition: height 0.3s linear, opacity .1s linear;
+
+
+}
+
+nav .nav-links2.active{
+    opacity:1;
+    height: 300px;
+    transition: height 0.3s linear, opacity 0.7s linear 0.2s;
+    position: relative;
+
+
+  
+    
+}
+
+nav .nav-links2 ul{
+    list-style: none;
+
+}
+
+nav .nav-links2 ul li{
+    margin-bottom: 5px;
+}
+
+
+
+
+ .hamburger .line{
+    height: 3px;
+    width: 35px;
+    background-color: black;
+    display: flex;
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+    position: absolute;
+    top:6px;
+    right: 40px;
+    background-color: rgb(251, 251, 251);
+    padding: 7px 5px;
+    border-radius: 3px;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.243);
+}
+
+ }
