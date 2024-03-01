@@ -67,10 +67,10 @@ nav .nav-links2{
 
     height: 50px;
     opacity: 0;
+    text-align: center;
     font-size: 1rem;
     position: relative;
     top:100px;
-    left: 45%;
     transition: height 0.3s linear, opacity .1s linear;
 
 
@@ -79,7 +79,7 @@ nav .nav-links2{
 nav .nav-links2.active{
     opacity:1;
     height: 300px;
-    transition: height 0.3s linear, opacity 0.7s linear 0.2s;
+    transition: height 0.3s linear, opacity .1s linear 0.2s;
     position: relative;
 
 
@@ -102,8 +102,10 @@ nav .nav-links2 ul li{
  .hamburger .line{
     height: 3px;
     width: 35px;
+    border-radius: 25px;
     background-color: black;
     display: flex;
+    transition: transform 0.35s ease, opacity 0.1s;
 }
 
 .hamburger{
@@ -117,6 +119,32 @@ nav .nav-links2 ul li{
     padding: 7px 5px;
     border-radius: 3px;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.243);
+    transition: background-color .25s ease;
+
+   
 }
+
+.hamburger.open{
+    background-color: red;
+    transition: all .35s ease;
+}
+
+.hamburger.open .line.one{
+    opacity:0;
+}
+
+.hamburger.open .line.two{
+    transform: rotate(45deg);
+    background-color: white;
+    /* transition: all .55s ease;  */
+}
+
+.hamburger.open .line.three{
+    transform: translateY(-10px) rotate(-45deg);
+    background-color: white;
+    /* transition: all .55s ease;  */
+}
+
+
 
  }
